@@ -1,1 +1,322 @@
 
+\documentclass[14pt]{extarticle}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english,russian]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\title{Магнитный ускоритель масс}
+\author{Бакиров Искандер Ильгизович \thanks{ Руководитель: Гончар Валентина Петровна \\ МАОУ Лицей "№153"}}
+
+\begin{document}
+
+\maketitle
+
+\vspace{7cm}
+\begin{center} 
+\begin{tabular}{cl} 
+1. & Введение \\  
+2. & Теоретическая часть \\  
+3. & Расчёты \\
+3. & Практическая часть \\
+4. & Заключение \\
+5. & Использованная литература
+\end{tabular} 
+\end{center}
+
+
+
+
+
+\newpage
+\section{Введение}
+
+История создания устройств, способных метать снаряды без помощи пороха или сжатого воздуха, уходит корнями в эпоху бурного развития электродинамики в первой половине XIX века, и центральное место в этой истории занимает имя выдающегося немецкого математика и физика Карла Фридриха Гаусса. Хотя сам Гаусс не строил боевых электромагнитных пушек, его фундаментальные труды по теории магнетизма и, в частности, сформулированная им теорема о потоке магнитного поля (знаменитая теорема Гаусса) и разработка абсолютной системы единиц измерения магнитного поля стали той теоретической базой, без которой появление подобных устройств было бы немыслимо. Впоследствии именем этого ученого назвали целый класс электромагнитных ускорителей, где сила Ампера, действующая на проводник с током в магнитном поле, используется для разгона ферромагнитного снаряда внутри системы последовательно расположенных катушек-соленоидов. Интересно, что первые экспериментальные образцы, демонстрирующие принцип «магнитного ружья», появились еще в конце XIX века, однако они оставались лишь лабораторными курьезами, поскольку уровень развития электротехники не позволял создать компактные мощные источники тока и системы управления временными интервалами. Проблема заключалась в том, что для эффективного разгона снаряду необходимо последовательно придать импульс от каждой катушки в строго определенный момент, когда он достигает её центра — слишком раннее или позднее включение приводит к торможению и резкому падению коэффициента полезного действия. В течение всего XX века инженеры и энтузиасты периодически возвращались к этой схеме, но настоящий всплеск интереса произошел уже во второй его половине, когда появились мощные полупроводниковые ключи (тиристоры и IGBT-транзисторы), способные коммутировать огромные токи в доли микросекунды, а также произошел прогресс в области конденсаторных батарей с низкой индуктивностью и высоким напряжением. В массовом сознании образ пушки Гаусса прочно закрепился благодаря научной фантастике: из компьютерных игр серий Quake, Fallout и Half-Life миллионы игроков узнали бесшумное, но смертоносное «гаусс-ружье», стреляющее раскаленными болтами с электромагнитным ускорителем. Однако парадокс технологии заключается в том, что, несмотря на футуристический вид, реальные лабораторные образцы до сих пор значительно уступают по дульной энергии классическому огнестрельному оружию или даже пневматике, а главными препятствиями остаются колоссальная сила противодействия (отдача катушки) и трудность поддержания КПД выше 5-10 процентов при многокаскадной схеме. Тем не менее, сегодня пушка Гаусса перестала быть исключительно игрушкой для физиков-любителей: военные лаборатории США, Китая и Германии рассматривают многокатушечные ускорители как потенциальную основу для систем ближней ПВО, где важна не столько магазинная стрельба, сколько возможность плавно регулировать скорость снаряда в широких пределах без грохота и порохового задымления. Таким образом, устройство, начавшее свой путь с абстрактных математических уравнений Гаусса и забавных демонстраций в викторианских лабораториях, сегодня находится на пороге превращения в инженерную реальность, и именно это противоречие между теоретической элегантностью, массовой узнаваемостью и практической сложностью реализации составляет главный интерес к данной теме.
+\newpage
+\section{Теоретическая часть}
+
+\subsection{Цель}
+
+Разработать и создать действующую модель электромагнитного ускорителя масс (пушки Гаусса), стремясь к достижению максимального коэффициента полезного действия (КПД) установки. Конечная концепция подразумевает создание устройства, способного метать снаряды бесшумно (отсутствие пороховых газов) и с низкой себестоимостью выстрела по сравнению с традиционным оружием
+
+
+\subsection{Задачи}
+\begin{enumerate}
+\item Изучить физические принципы работы ускорителя, рассчитать оптимальные параметры катушки индуктивности и конденсатора
+    
+\item Собрать экспериментальный стенд, включающий соленоид (катушку), батарею конденсаторов, систему зарядки и управления (ключ-тиристор или IGBT).
+    
+\item Произвести серию выстрелов для измерения реальной скорости снаряда и демонстрации работоспособности устройства.
+\end{enumerate}
+\newpage
+\section{Вывод условия согласования времени импульса и пролёта снаряда}
+
+\subsection{Исходные параметры}
+\begin{enumerate}
+    \item $C$ -- ёмкость конденсатора, Ф
+    \item $U$ -- напряжение заряда, В
+    \item $m$ -- масса снаряда, кг
+    \item $l_{\text{кат}}$ -- длина катушки, м
+    \item $l_{\text{снар}}$ -- длина снаряда, м
+    \item $D$ -- средний диаметр катушки, м
+    \item $N$ -- количество витков
+    \item $K$ -- коэффициент Нагаока (зависит от $D/l_{\text{кат}}$)
+    \item $v_{\max}$ -- максимальная скорость вылета пули, $\frac{\text{м}}{\text{с}}$ 
+\end{enumerate}
+
+\subsection{Путь пули}
+Расстояние, которое должен пройти центр снаряда от входа до выхода из зоны действия поля:
+\begin{equation}
+    S_{\text{уск}} = l_{\text{кат}} + \frac{l_{\text{снар}}}{2}
+    \label{eq:path}
+\end{equation}
+
+\subsection{Время пролёта пути ускорения}
+При равноускоренном движении средняя скорость $v_{\text{ср}} = v_{\max}/2$, откуда:
+\begin{equation}
+    t_{\text{прол}} = \frac{S_{\text{уск}}}{v_{\text{ср}}} = \frac{2 \cdot S_{\text{уск}}}{v_{\max}}
+    \label{eq:tflight}
+\end{equation}
+
+Подставляя (\ref{eq:path}) в (\ref{eq:tflight}):
+\begin{equation}
+    t_{\text{прол}} = \frac{2 \cdot \left(l_{\text{кат}} + \dfrac{l_{\text{снар}}}{2}\right)}{v_{\max}}
+    \label{eq:tflight_expanded}
+\end{equation}
+
+\subsection{Индуктивность катушки (соленоида)}
+Геометрическая формула индуктивности многослойного соленоида:
+\begin{equation}
+    L_{\text{кат}} = \frac{\mu_0 \cdot N^2 \cdot \pi \cdot D^2}{4 \cdot l_{\text{кат}}} \cdot K
+    \label{eq:inductance}
+\end{equation}
+где:
+\begin{enumerate}
+    \item $\mu_0 = 4\pi \cdot 10^{-7} \ \frac{\text{Гн}}{\text{м}}$ -- магнитная постоянная
+    \item $K$ -- коэффициент Нагаока, зависящий от отношения $D/l_{\text{кат}}$
+\end{enumerate}
+
+\subsection{Длительность полуволны колебательного контура}
+\begin{equation}
+    t_{\text{имп}} = \pi \sqrt{L_{\text{кат}} \cdot C}
+    \label{eq:thalf}
+\end{equation}
+
+Подставляем выражение для $L_{\text{кат}}$ из (\ref{eq:inductance}) в (\ref{eq:thalf}):
+\begin{equation}
+    t_{\text{имп}} = \pi \sqrt{ \frac{\mu_0 \cdot N^2 \cdot \pi \cdot D^2}{4 \cdot l_{\text{кат}}} \cdot K \cdot C }
+    \label{eq:thalf_expanded}
+\end{equation}
+
+Упрощаем:
+\begin{equation}
+    t_{\text{имп}} = \pi \cdot N \cdot D \cdot \sqrt{ \frac{\mu_0 \cdot \pi \cdot K \cdot C}{4 \cdot l_{\text{кат}}} }
+    \label{eq:thalf_simplified}
+\end{equation}
+
+\subsection{Условие отсутствия торможения}
+Снаряд должен покинуть зону действия поля до того, как ток упадёт до нуля:
+\begin{equation}
+    t_{\text{прол}} \le t_{\text{имп}}
+    \label{eq:condition}
+\end{equation}
+
+\subsection{Подстановка в неравенство}
+Подставляем (\ref{eq:tflight_expanded}) и (\ref{eq:thalf_simplified}) в (\ref{eq:condition}):
+\begin{equation}
+    \frac{2 \cdot \left(l_{\text{кат}} + \dfrac{l_{\text{снар}}}{2}\right)}{v_{\max}} \le \pi \cdot N \cdot D \cdot \sqrt{ \frac{\mu_0 \cdot \pi \cdot K \cdot C}{4 \cdot l_{\text{кат}}} }
+    \label{eq:inequality}
+\end{equation}
+
+\subsection{Итоговое неравенство (условие оптимального согласования)}
+\begin{equation}
+    \boxed{ \frac{2 \cdot \left(l_{\text{кат}} + \dfrac{l_{\text{снар}}}{2}\right)}{v_{\max}} \le \pi \cdot N \cdot D \cdot \sqrt{ \frac{\mu_0 \cdot \pi \cdot K \cdot C}{4 \cdot l_{\text{кат}}} } }
+    \label{eq:final_inequality}
+\end{equation}
+
+\subsection{Выражение для требуемого количества витков}
+Решаем неравенство (\ref{eq:inequality}) относительно $N$:
+\begin{equation}
+    N \ge \frac{2 \cdot \left(l_{\text{кат}} + \dfrac{l_{\text{снар}}}{2}\right)}{\pi \cdot v_{\max} \cdot D \cdot \sqrt{ \dfrac{\mu_0 \cdot \pi \cdot K \cdot C}{4 \cdot l_{\text{кат}}} }}
+    \label{eq:N_required}
+\end{equation}
+
+Упрощаем:
+\begin{equation}
+    \boxed{ N \ge \frac{2 \cdot \left(l_{\text{кат}} + \dfrac{l_{\text{снар}}}{2}\right)}{\pi \cdot v_{\max} \cdot D} \cdot \sqrt{ \frac{4 \cdot l_{\text{кат}}}{\mu_0 \cdot \pi \cdot K \cdot C} } }
+    \label{eq:N_final}
+\end{equation}
+
+\subsection{Подстановка}
+
+Исходные данные:
+\begin{align}
+    C &= 10^{-3} \ \text{Ф} \notag\\
+    U &= 450 \ \text{В} \notag\\
+    m &= 0.0067 \ \text{кг} \notag\\
+    l_{\text{кат}} &= 0.03 \ \text{м} \notag\\
+    l_{\text{снар}} &= 0.03 \ \text{м} \notag\\
+    D &= 0.02 \ \text{м} \notag\\
+    v_{\max} &= 25 \ \frac{\text{м}}{\text{с}} \quad \text{(задано)} \notag\\
+    K &\approx 0.75 \quad \text{(для } D/l = 0.67\text{)} \notag
+\end{align}
+
+Путь ускорения:
+\begin{equation}
+    S_{\text{уск}} = 0.03 + 0.015 = 0.045 \ \text{м}
+\end{equation}
+
+Время пролёта:
+\begin{equation}
+    t_{\text{прол}} = \frac{2 \cdot 0.045}{25} = 0.0036 \ \text{с} = 3.6 \ \text{мс}
+\end{equation}
+
+Требуемое количество витков по формуле (\ref{eq:N_final}):
+\begin{equation}
+    N \ge \frac{2 \cdot 0.045}{\pi \cdot 25 \cdot 0.02} \cdot \sqrt{ \frac{4 \cdot 0.03}{4\pi \cdot 10^{-7} \cdot \pi \cdot 0.75 \cdot 10^{-3}} }
+\end{equation}
+
+Вычисляем коэффициент:
+\begin{equation}
+    \frac{2 \cdot 0.045}{\pi \cdot 25 \cdot 0.02} = \frac{0.09}{1.5708} \approx 0.0573
+\end{equation}
+
+Вычисляем подкоренное выражение:
+\begin{equation}
+    \frac{4 \cdot 0.03}{4\pi \cdot 10^{-7} \cdot \pi \cdot 0.75 \cdot 10^{-3}} = \frac{0.12}{2.958 \cdot 10^{-9}} \approx 4.056 \cdot 10^{7}
+\end{equation}
+
+Корень:
+\begin{equation}
+    \sqrt{4.056 \cdot 10^{7}} \approx 6368
+\end{equation}
+
+Итого требуемое количество витков:
+\begin{equation}
+    N \ge 0.0573 \cdot 6368 \approx 365
+\end{equation}
+
+Проверка индуктивности при $N = 365$:
+\begin{equation}
+    L_{\text{кат}} = \frac{4\pi \cdot 10^{-7} \cdot 365^2 \cdot \pi \cdot 0.02^2}{4 \cdot 0.03} \cdot 0.75 \approx 1.33 \ \text{мГн}
+\end{equation}
+
+Проверка времени импульса:
+\begin{equation}
+    t_{\text{имп}} = \pi \sqrt{1.33 \cdot 10^{-3} \cdot 10^{-3}} \approx 3.62 \ \text{мс}
+\end{equation}
+
+Сравнение:
+\begin{equation}
+    t_{\text{прол}} = 3.6 \ \text{мс} \quad \le \quad t_{\text{имп}} = 3.62 \ \text{мс}
+\end{equation}
+
+Условие выполняется на пределе. Требуется не менее 365 витков.
+
+\subsection{Вывод}
+При заданной скорости вылета $v_{\max} = 25 \ \frac{\text{м}}{\text{с}}$, диаметре катушки $D = 20 \ \text{мм}$, длине катушки $l_{\text{кат}} = 30 \ \text{мм}$ и снаряде $l_{\text{снар}} = 30 \ \text{мм}$ количество витков должно удовлетворять неравенству (\ref{eq:N_final}), что для данных параметров даёт $N \ge 365$. Это обеспечивает согласование времени пролёта снаряда с длительностью токового импульса и исключает паразитное торможение.
+
+\newpage
+\section{Практическая часть}
+
+
+\subsection{Высоковольтный конденсатор}
+Конденсатор является накопителем энергии. В установке используется электролитический конденсатор со следующими параметрами:
+\begin{enumerate}
+    \item Ёмкость: $C = 1000 \ \text{мкФ} = 10^{-3} \ \text{Ф}$
+    \item Номинальное напряжение: $U_{\text{ном}} = 450 \ \text{В}$
+    \item Рабочее напряжение заряда: $U = 400 \text{--} 450 \ \text{В}$
+    \item Запасаемая энергия: $E_C = \dfrac{C U^2}{2} \approx 101 \ \text{Дж}$
+    \item Тип: оксидный (электролитический)
+\end{enumerate}
+Конденсатор заряжается от повышающего преобразователя и разряжается через тиристор в катушку, создавая мощный импульс тока длительностью порядка нескольких миллисекунд.
+
+\subsection{Катушка индуктивности (соленоид)}
+Катушка преобразует электрический импульс в магнитное поле, которое разгоняет ферромагнитный снаряд. Параметры катушки:
+\begin{enumerate}
+    \item Длина намотки: $l_{\text{кат}} = 30 \ \text{мм} = 0.03 \ \text{м}$
+    \item Средний диаметр: $D = 20 \ \text{мм} = 0.02 \ \text{м}$
+    \item Провод: медный эмалированный, сечение $S_{\text{сеч}} = 1 \ \text{мм}^2$
+    \item Количество витков: $N = 420$ (7 слоёв по 60 витков)
+    \item Расчётная индуктивность: $L \approx 1.33 \ \text{мГн}$
+    \item Активное сопротивление: $R \approx 0.3 \ \text{Ом}$
+\end{enumerate}
+Катушка намотана непосредственно на ствол (трубку из диэлектрика) рядовой многослойной намоткой. Все слои намотаны в одном направлении, поэтому их магнитные поля складываются.
+
+\subsection{Тиристор (силовой ключ)}
+Тиристор выполняет роль управляемого электронного ключа, замыкающего цепь разряда конденсатора на катушку. Основные характеристики:
+\begin{enumerate}
+    \item Модель: 70TPS12 
+    \item Максимальный прямой ток: до $I_{\text{max}} = 700 \ \text{А}$ (в импульсе)
+    \item Максимальное обратное напряжение: $V_{\text{DRM}} = 1200 \ \text{В}$
+    \item Ток управления (отпирания): $I_G \approx 50 \text{--} 100 \ \text{мА}$
+    \item Цоколёвка (слева направо): 1 -- Катод (K), 2 -- Анод (A), 3 -- Управляющий электрод (G)
+\end{enumerate}
+Тиристор открывается коротким импульсом от кнопки запуска и остаётся открытым до окончания разряда конденсатора. После падения тока до нуля запирается автоматически, предотвращая обратный ток и паразитное торможение снаряда.
+
+\subsection{Батарея питания}
+Питание установки осуществляется от аккумуляторной сборки из четырёх литий-ионных элементов типоразмера 18650:
+\begin{enumerate}
+    \item Количество элементов: $n = 4$
+    \item Тип элементов: Li-Ion 18650
+    \item Номинальное напряжение одного элемента: $U_1 = 3.7 \ \text{В}$
+    \item Суммарное напряжение сборки: $U_{\text{бат}} = 4 \times 3.7 = 14.8 \ \text{В}$
+    \item Максимальное напряжение (полный заряд): $U_{\text{max}} = 4 \times 4.2 = 16.8 \ \text{В}$
+\end{enumerate}
+Батарея питает повышающий DC-DC преобразователь, который заряжает высоковольтный конденсатор до напряжения $400 \text{--} 450 \ \text{В}$. Зарядка занимает несколько секунд.
+
+\newpage
+
+\section{Схема}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{CpHUQPy.jpg}
+    \caption{Схема пушки гаусса}
+    \label{fig:my_label}
+\end{figure}
+\newpage
+
+\section{Чертёжи и 3D модели}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{B.png}
+    \caption{чертёж пистолетной рукоятки}
+    \label{fig:my_label}
+\end{figure}
+
+\subsection{How to change the margins and paper size}
+
+Usually the template you're using will have the page margins and paper size set correctly for that use-case. For example, if you're using a journal article template provided by the journal publisher, that template will be formatted according to their requirements. In these cases, it's best not to alter the margins directly.
+
+If however you're using a more general template, such as this one, and would like to alter the margins, a common way to do so is via the geometry package. You can find the geometry package loaded in the preamble at the top of this example file, and if you'd like to learn more about how to adjust the settings, please visit this help article on \href{https://www.overleaf.com/learn/latex/page_size_and_margins}{page size and margins}.
+
+\subsection{How to change the document language and spell check settings}
+
+Overleaf supports many different languages, including multiple different languages within one document.
+
+To configure the document language, simply edit the option provided to the babel package in the preamble at the top of this example project. To learn more about the different options, please visit this help article on \href{https://www.overleaf.com/learn/latex/International_language_support}{international language support}.
+
+To change the spell check language, simply open the Overleaf menu at the top left of the editor window, scroll down to the spell check setting, and adjust accordingly.
+
+\subsection{How to add Citations and a References List}
+
+You can simply upload a \verb|.bib| file containing your BibTeX entries, created with a tool such as JabRef. You can then cite entries from it, like this: \cite{greenwade93}. Just remember to specify a bibliography style, as well as the filename of the \verb|.bib|. You can find a \href{https://www.overleaf.com/help/97-how-to-include-a-bibliography-using-bibtex}{video tutorial here} to learn more about BibTeX.
+
+If you have an \href{https://www.overleaf.com/user/subscription/plans}{upgraded account}, you can also import your Mendeley or Zotero library directly as a \verb|.bib| file, via the upload menu in the file-tree.
+
+\subsection{Good luck!}
+
+We hope you find Overleaf useful, and do take a look at our \href{https://www.overleaf.com/learn}{help library} for more tutorials and user guides! Please also let us know if you have any feedback using the \textbf{Contact us} link at the bottom of the Overleaf menu --- or use the contact form at \url{https://www.overleaf.com/contact}.
+
+\bibliographystyle{alpha}
+\bibliography{sample}
+
+\end{document}
